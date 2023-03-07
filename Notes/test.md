@@ -570,3 +570,18 @@ If $\vec{O}$ and $\vec{O_2}$ are mean centered already, then:
 $$
 Corr(O,O_2)=\frac{\vec{O}.\vec{O_2}}{|O|*|O_2|}
 $$
+
+
+## Distance of a point to a line
+
+The distance of $\vec{p}$ from a line with normal $\vec{n}$ is $|\vec{p} \cdot \vec{n}|$.
+
+Easy way to visualize:
+
+Notice that $|\vec{pq}|$ is the same as $|\vec{q_2}|$, and because $\vec{q_2}$ is a projection of $\vec{p}$ on the line:
+
+$$
+|\vec{q_2}|=\vec{\hat{q_2}} \cdot \vec{p}=\vec{n} \cdot \vec{p}
+$$
+
+![](Images/line-to-point.png)
