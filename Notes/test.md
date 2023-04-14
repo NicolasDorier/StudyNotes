@@ -178,7 +178,7 @@ $$
 
 Seen like this, some point becomes immediately apparent:
 1. The convolution is commutative `a*b = b*a`
-2. The diagonal is actually the dot product `a.b`
+2. The sum of the diagonal is actually the dot product `a.b`
 
 If `a` and `b` are a probability distribution of two random variable `A` and `B`, the convolution is the probability distribution of the sum of `A` and `B`. (if `A` and `B` are independant)
 
@@ -460,7 +460,7 @@ A frequency distribution of a random variable is equivalent to an histogram bein
 
 You can then get the probability distribution by applying $L_1$ normalization.
 
-Say you counted `1,4,6,1,3`, total count is `15`, so probablility distribution is, `0.066, 0.266, 0.4, 0.066, 0.2`.
+Say you observed `1,4,6,1,3`, total count is `15`, so probablility distribution is, `0.066, 0.266, 0.4, 0.066, 0.2`.
 
 
 ## Expected value
@@ -476,7 +476,7 @@ With $\vec{x}$ being the discrete values of X, and $\vec{p(x)}$ being the probab
 
 It is also the weighted average of the frequency distribution.
 
-A cool way to visualize the average of outcome (and thus the expected value from the outcomes), is to note that the average is nothing but the coordinates of the vector projected by  the ouctome vector $\vec{O}$ onto $\vec{1}$.
+A cool way to visualize the average of outcome (and thus the expected value from the outcomes), is to note that the average is nothing but the length of the vector projected by the ouctome vector $\vec{O}$ onto $\vec{1}$ divided by the length of $|\vec{1}|$ ($N^{-1/2}$).
 
 Why?
 
