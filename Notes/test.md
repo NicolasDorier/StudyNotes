@@ -439,6 +439,7 @@ As such, `h(X)=0`.
 If `h(X)` isn't certain, we call this measure `KL(X || Y)` or Kullback-Leibler Divergence.
 
 In form of textbook:
+
 $$
 KL(X || Y)=h(X,Y)-h(X)\\
 =\vec{p(X)}\cdot\vec{i(Y/X)}\\
