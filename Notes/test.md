@@ -1,4 +1,4 @@
-DON'T READ THIS DOC ON GITHUB, INSTEAD USE VS CODE
+DON'T READ THIS DOC ON GITHUB, INSTEAD USE VS CODE, MARKDOWN LATEX ON GITHUB IS BROKEN
 
 A continuous function can be represented as a vector of arbitrary high dimension.
 For example, let's take two arbitrary functions `f` and `g` in vector notation.
