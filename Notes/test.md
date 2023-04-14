@@ -488,10 +488,9 @@ It could be rewritten as
 $$
 m=(\vec{O}\cdot\vec{1})/(\vec{1}\cdot\vec{1})\\
 
-m=(|\vec{O}||\vec1|cos(OI))/|\vec1|^2\\
-m=(|\vec{O}|cos(OI))/|\vec1|\\
+m=(|\vec{O}||\vec1|cos(O1))/|\vec1|^2\\
+m=(|\vec{O}|cos(O1))/|\vec1|\\
 m|\vec{1}|=|\vec{O}|cos(\hat{O1})\\
-|\vec{m}|=|\vec{O}|cos(\hat{O1})\\
 $$
 
 $|\vec{O}|cos(\hat{O1})$ is equal to the length of the projection of $\vec{O}$ over $\vec{1}$. 
@@ -585,3 +584,76 @@ $$
 $$
 
 ![](Images/line-to-point.png)
+
+
+## Probability distribution, Probability Mass Function and Probability Density Function
+
+A `probability distribution` is any function that output the probability of events or outcome of a random variable. A probablity distribution is in general noted `P(<Some query depending on x>)`.
+
+The `Probability Mass function` (PMF) describe the function $P(X=x)$, in other words, it assign a probability for any outcome `x`. It's often noted as a function $p(x)$.
+
+A `Probability Density function` (PDF) is like the PMF, for continuous random variable. The main difference is that in the continuous domain $P(X=x)=0$. Since there is an infinity of different outcome `x`, the probability of a value being exactly a specific number is 0. As such, you can only query the probability of a span such as $P(X<x)$.
+To get this, you need to calculate the area under the curve of the PDF. The specific values of this curve doesn't represent a probability, instead it represents the "density" of the probability at this point.
+
+A `Cumulative Distribution Function` (CDF) is the function describing $P(X<x)$. It's an integral of the PDF, or a sum of the PMF. With it, we can easily evaluate other type of range queries.
+
+## Convolution in probability
+
+If variable `X` and `Y` are independant, the distribution of `Z = X + Y` is equal the convolution of `p(X)` and `p(Y)`.
+
+# LLM
+
+LLaMA Model: A model leaked by Facebook.
+Alpaca Model: A model trained using davinci 003 and LLAMA, performance near ChatGPT 3.5
+davinci-003: A model available through API on OpenAI
+
+# Gradient
+
+A derivative $f'(x)$ or $\frac{\partial f}{\partial x}$ works on a single variable, is the rate of increase of `x`.
+
+A gradient $\nabla{f(x,y)}=(\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y})$ is the direction and rate of increase of a function at a given point.
+
+$ \frac{\partial f}{\partial x}$ is the derivative of the function $f(x)$, where we consider `y` to be a constant.
+
+## Back propagation
+
+Back propagation is a general mechanism to calculate the derivative of a function related to change to any element in the formula.
+
+For example, imagine you have this function `L`:
+
+$$
+L (x_1, x_2, x_3, x_4) = ((x_1 * x_2) + x_3) * x_4
+$$
+
+You could represent it as a tree.
+
+![](Images/Backprop-1.svg)
+
+Where `e`, `d` are intermediate results.
+
+Imagine that we set the values of $x_i$ to some constant, those values `propagate` to `L`.
+
+$$
+x_1 = 2\\
+x_2 = -3\\
+x_3 = 10\\
+x_4 = -2
+$$
+
+![](Images/Backprop-2.svg)
+
+What we call `back propagation` is how we can then calculate the gradient of `L` with respect to each input variable $x_i$.
+
+The way we do this is by going from `L` to the leafs, calculating along the way the derivative of `L` in respect of each node variable.
+
+![](Images/Backprop-3.svg)
+
+We call the derivative of each variables in respect to the output the `local derivative`. To get the derivative of `L`, we just need to multiply the `derivative of the output` by this local `derivative`.
+
+Example of local derivative:
+* For the operation `*` in `a * b -> c`, $dc/da=b$
+* For the operation `+` in `a + b -> c`, $dc/da=1$
+
+For each node variable, we need to calculate the local derivative, then multiply by the `output derivative`, this gives us the derivative of `L` in respect to the variable in the node. (Chain rule)
+
+In the context of Machine learning, `L` is a `loss function`, and this process run many time, each loop updating the input variables by  $-\frac{df}{dx_i} * r$ where `r` is a constant called `Learning rate`.
