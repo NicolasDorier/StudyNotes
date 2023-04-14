@@ -488,7 +488,6 @@ It could be rewritten as
 
 $$
 m=(\vec{O}\cdot\vec{1})/(\vec{1}\cdot\vec{1})\\
-
 m=(|\vec{O}||\vec1|cos(O1))/|\vec1|^2\\
 m=(|\vec{O}|cos(O1))/|\vec1|\\
 m|\vec{1}|=|\vec{O}|cos(\hat{O1})\\
