@@ -553,9 +553,9 @@ $$
 But this is the same, as the normalization constants $N^{-1/2}$ are cancelling out.
 
 $$
-Corr(O,O_2)=\frac{N^{-1}(\vec{OM}.\vec{O_2M_2})}{N^{-1/2}*|OM|*N^{-1/2}*|O_2M_2|}\\
-=\frac{N^{-1}(\vec{OM}.\vec{O_2M_2})}{N^{-1}*|OM|*|O_2M_2|}\\
-=\frac{\vec{OM}.\vec{O_2M_2}}{|OM|*|O_2M_2|}\\
+Corr(O,O_2)=\frac{N^{-1}(\vec{OM}\cdot\vec{O_2M_2})}{N^{-1/2}\cdot|\vec{OM}|\cdot N^{-1/2}\cdot|\vec{O_2M_2}|}\\
+=\frac{N^{-1}(\vec{OM}\cdot\vec{O_2M_2})}{N^{-1}\cdot|\vec{OM}|\cdot|\vec{O_2M_2}|}\\
+=\frac{\vec{OM}\cdot\vec{O_2M_2}}{|\vec{OM}|\cdot|\vec{O_2M_2}|}\\
 $$
 
 In other words, $\vec{OM}$ gives us two important information:
