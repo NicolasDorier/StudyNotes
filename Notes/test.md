@@ -1,3 +1,5 @@
+DON'T READ THIS DOC ON GITHUB, INSTEAD USE VS CODE
+
 A continuous function can be represented as a vector of arbitrary high dimension.
 For example, let's take two arbitrary functions `f` and `g` in vector notation.
 
