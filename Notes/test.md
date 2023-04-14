@@ -476,7 +476,7 @@ With $\vec{x}$ being the discrete values of X, and $\vec{p(x)}$ being the probab
 
 It is also the weighted average of the frequency distribution.
 
-A cool way to visualize the average of outcome (and thus the expected value from the outcomes), is to note that the average is nothing but the length of the vector projected by the ouctome vector $\vec{O}$ onto $\vec{1}$ divided by the length of $|\vec{1}|$ ($N^{-1/2}$).
+A cool way to visualize the average of outcome (and thus the expected value from the outcomes), is to note that the average is nothing but the length of the vector projected by the ouctome vector $\vec{O}$ onto $\vec{1}$ divided by the length of $|\vec{1}|$ (ie: $N^{-1/2}$).
 
 Why?
 
@@ -493,6 +493,7 @@ m=(\vec{O}\cdot\vec{1})/(\vec{1}\cdot\vec{1})\\
 m=(|\vec{O}||\vec1|cos(O1))/|\vec1|^2\\
 m=(|\vec{O}|cos(O1))/|\vec1|\\
 m|\vec{1}|=|\vec{O}|cos(\hat{O1})\\
+m = \frac{|\vec{O}|cos(\hat{O1})}{N^{-1/2}}=N^{1/2}\cdot|\vec{O}|cos(\hat{O1})
 $$
 
 $|\vec{O}|cos(\hat{O1})$ is equal to the length of the projection of $\vec{O}$ over $\vec{1}$. 
@@ -504,7 +505,7 @@ $\vec{m}$ satisfies this definition.
 ## Standard deviation
 
 Standard deviation is "How far from the average" are the outcomes.
-As we have seen above, the average is the projection of $\vec{O}$ onto $\vec{1}$.
+As we have seen above, the average is the length of the projection of $\vec{O}$ onto $\vec{1}$ scaled by a constant.
 
 The standard deviation is $|\vec{OM}|$ multiplied by a constant based on the number of dimensions (ie, number of outcomes).
 
@@ -656,6 +657,6 @@ Example of local derivative:
 * For the operation `*` in `a * b -> c`, $dc/da=b$
 * For the operation `+` in `a + b -> c`, $dc/da=1$
 
-For each node variable, we need to calculate the local derivative, then multiply by the `output derivative`, this gives us the derivative of `L` in respect to the variable in the node. (Chain rule)
+For each node variable, we need to calculate the local derivative, then multiply by the `output derivative`, this gives us the derivative of `L` (what we call `grad` in the image) in respect to the variable in the node. (Chain rule)
 
 In the context of Machine learning, `L` is a `loss function`, and this process run many time, each loop updating the input variables by  $-\frac{df}{dx_i} * r$ where `r` is a constant called `Learning rate`.
