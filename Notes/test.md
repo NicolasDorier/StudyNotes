@@ -476,7 +476,7 @@ With $\vec{x}$ being the discrete values of X, and $\vec{p(x)}$ being the probab
 
 It is also the weighted average of the frequency distribution.
 
-A cool way to visualize the average of outcome (and thus the expected value from the outcomes), is to note that the average is nothing but the length of the vector projected by the ouctome vector $\vec{O}$ onto $\vec{1}$ divided by the length of $|\vec{1}|$ (ie: $N^{-1/2}$).
+A cool way to visualize the average of outcome (and thus the expected value from the outcomes), is to note that the average is nothing but the components of the vector projected by the ouctome vector $\vec{O}$ onto $\vec{1}$. In another words, $m * \vec{1}$.
 
 Why?
 
